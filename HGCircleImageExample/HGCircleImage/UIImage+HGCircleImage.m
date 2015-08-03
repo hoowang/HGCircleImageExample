@@ -2,7 +2,7 @@
 //  UIImage+HGCircleImage.m
 //  HGCircleImageExample
 //
-//  Created by 王虎 on 15-8-3.
+//  Created by hooge on 15-8-3.
 //  Copyright (c) 2015年 hoowang. All rights reserved.
 //
 
@@ -21,6 +21,8 @@
 
     // 3.裁剪
     CGContextClip(ctx);
+
+    // 4.绘制图像
     [self drawInRect:rect];
 
     // 4.取得图像
