@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F1096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6dU-s8-yAk">
+                                <rect key="frame" x="200" y="20" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="n1O-F0-YhW"/>
+                                    <constraint firstAttribute="width" constant="200" id="qtV-Rw-ldB"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rmU-hd-r8C">
+                                <rect key="frame" x="200" y="390" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="nea-pL-9HC"/>
+                                    <constraint firstAttribute="width" constant="200" id="q0o-Zi-89t"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gea-Aq-6AV">
+                                <rect key="frame" x="255" y="285" width="90" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3Jq-5d-xnd"/>
+                                    <constraint firstAttribute="width" constant="90" id="iec-lf-Eyt"/>
+                                </constraints>
+                                <state key="normal" title="生成圆形图片">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="generateCircleImage:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="U1I-Rp-5Yy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="rmU-hd-r8C" secondAttribute="bottom" constant="10" id="Iv5-Ew-dLC"/>
+                            <constraint firstItem="6dU-s8-yAk" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="20" id="XdL-bu-kMG"/>
+                            <constraint firstAttribute="centerX" secondItem="6dU-s8-yAk" secondAttribute="centerX" id="egO-WA-bdN"/>
+                            <constraint firstAttribute="centerX" secondItem="gea-Aq-6AV" secondAttribute="centerX" id="ejU-lk-Kl4"/>
+                            <constraint firstAttribute="centerY" secondItem="6dU-s8-yAk" secondAttribute="centerY" id="hUh-VG-3lm"/>
+                            <constraint firstAttribute="centerY" secondItem="gea-Aq-6AV" secondAttribute="centerY" id="xEq-ln-2QJ"/>
+                            <constraint firstAttribute="centerX" secondItem="rmU-hd-r8C" secondAttribute="centerX" id="zZD-46-hSd"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="hUh-VG-3lm"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="circleImageView" destination="rmU-hd-r8C" id="dTm-de-aLB"/>
+                        <outlet property="originalImageView" destination="6dU-s8-yAk" id="ptj-7z-lMp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
